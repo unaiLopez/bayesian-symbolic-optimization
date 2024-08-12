@@ -35,12 +35,8 @@ class BinaryTree:
                 value=value
             )
         else:
-            if depth > 1:
-                operator_id = f'any_operator_and_values_depth_{self.depth - depth}_node_{self.index}'
-                operator = trial.suggest_categorical(operator_id, self.operators + list(self.variables))
-            elif depth == 1:
-                operator_id = f'unary_operator_and_values_depth_{self.depth - depth}_node_{self.index}'
-                operator = trial.suggest_categorical(operator_id, self.unary_operators + list(self.variables))
+            operator_id = f'any_operator_and_values_depth_{self.depth - depth}_node_{self.index}'
+            operator = trial.suggest_categorical(operator_id, self.operators + list(self.variables))
 
             node = Node(
                 id=operator_id,

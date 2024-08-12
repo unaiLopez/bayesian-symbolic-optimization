@@ -49,7 +49,7 @@ if __name__ == "__main__":
     """
 
     model = BayesianSymbolicRegressor(
-        max_tree_depth=4,
+        max_tree_depth=5,
         timeout=600,
         n_iterations=5000,
         use_constants=False,
